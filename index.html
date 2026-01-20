@@ -12,5 +12,26 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      window.VG_CONFIG = {
+        ID: "evQCqPTHDugsAGjFVi4y",
+        region: "na",
+        render: "bottom-right",
+        stylesheets: ["https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css"],
+      };
+    </script>
+
+    <script src="https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js"></script>
+
+    <script>
+      // Force widget to appear after load
+      window.addEventListener("load", () => {
+        if (window.VG?.openChat) {
+          // optional: comment this out if you don't want it to auto-open
+          // window.VG.openChat();
+        }
+      });
+    </script>
   </body>
 </html>
